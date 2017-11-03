@@ -3,25 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Alura Typer</title>
+    <link rel="stylesheet" href="css/libs/materialize.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    <h1>Alura Typer</h1>
 
-    <p class="frase" id="frase">Essa prase tem 5 palavras loren ipsun aa quer contador de palavras bruno moura</p>
+  <div class="container">
 
-	 <ul class="informacoes">
-	 	<li><span id="tamanho-frase"></span> palavras</li>
-	 	<li><span id="tempo-digitacao">3</span> segundos</li>
-	 </ul>
+    <h1 class="center">Alura Typer</h1>
 
-	 <textarea class="campo-digitacao" rows="8" cols="40"></textarea>
+    <p class="frase center" id="frase">Essa prase tem 5 palavras loren ipsun aa quer contador de palavras bruno moura</p>
 
-   <button id="botao-reiniciar">Reinicar Jogo</button>
+  	 <ul class="informacoes center">
+  	 	<li><span id="tamanho-frase"></span> palavras</li>
+  	 	<li><span id="tempo-digitacao">3</span> segundos</li>
+  	 </ul>
 
-	<ul>
-		<li><span id="contador-caracteres">0</span> Caracteres</li>
-		<li><span id="contador-palavras">0</span> Palavras</li>
-	</ul>
+  	 <textarea class="campo-digitacao" rows="8" cols="40"></textarea>
+
+     <button id="botao-reiniciar">Reinicar Jogo</button>
+
+  	<ul class="center">
+  		<li><span id="contador-caracteres">0</span> Caracteres</li>
+  		<li><span id="contador-palavras">0</span> Palavras</li>
+  	</ul>
+  </div>
 
 <script src="js/jquery.js"></script>
 <script src="js/main.js"></script>
