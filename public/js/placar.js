@@ -1,3 +1,5 @@
+$("#botao-placar").click(mostraPlacar);
+
 function inserePlacar() {
 	var corpoTabela = $(".placar").find("tbody");
 	var usuario 		= "Bruno Moura";
@@ -9,6 +11,19 @@ function inserePlacar() {
 	/* Evendo prepend adiciona a linha no inicio da tabela,
 	já o append sempre adiciona no final */
 	corpoTabela.prepend(linha);
+	$(".placar").slideDown(500);
+}
+
+
+
+function scrollPlacar() {
+  var posicaoPlacar = $(".placar").offset().top;
+	console.log(posicaoPlacar);
+
+    $("body").animate(
+    {
+        scrollTop: posicaoPlacar + "px"
+    }, 1000);
 }
 
 function novaLinha(usuario, palavras) {
@@ -28,5 +43,13 @@ function novaLinha(usuario, palavras) {
 
 function removerLinha() {
 	event.preventDefault();
-	$(this).parent().parent().remove();
+	var linha = $(this).parent().parent();
+	linha.fadeOut();
+	setTimeout(function() {
+		linha.remove();
+	}, 1000);
+}
+
+function mostraPlacar() {
+	$(".placar").stop().slideToggle(600);
 }
