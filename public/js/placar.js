@@ -12,18 +12,15 @@ function inserePlacar() {
 	já o append sempre adiciona no final */
 	corpoTabela.prepend(linha);
 	$(".placar").slideDown(500);
+	scrollPlacar()
 }
-
-
 
 function scrollPlacar() {
   var posicaoPlacar = $(".placar").offset().top;
-	console.log(posicaoPlacar);
-
-    $("body").animate(
-    {
-        scrollTop: posicaoPlacar + "px"
-    }, 1000);
+	$("body").animate(
+	{
+		scrollTop: posicaoPlacar + "px"
+	}, 1000);
 }
 
 function novaLinha(usuario, palavras) {
@@ -39,6 +36,7 @@ function novaLinha(usuario, palavras) {
 	linha.append(colunaPalavra);
 	linha.append(colunaRemover);
 	return linha;
+	scrollPlacar();
 }
 
 function removerLinha() {
